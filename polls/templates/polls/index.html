@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <title>serge whites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  
+  <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> -->
+  <!-- remember, jQuery is completely optional -->
+  {% load staticfiles %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static  'bootstrap/css/bootstrap.min.css' %}">
+  <script type="text/javascript" src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+  <script type='text/javascript' src="{% static 'js/jquery-3.2.1.js' %}"></script>
+  <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  <script type='text/javascript' src="{% static 'js/jquery.particleground.js' %}"></script>
+  <script type='text/javascript' src="{% static 'js/jquery-ui.js' %}"></script>
+  <script type='text/javascript' src="{% static 'js/demo.js' %}"></script>
+  <script type="text/javascript">
+ 
+    $(function(){
+
+       $("#register").click(function() {
+
+          ($("#dialog-register").dialog({
+               autoOpen: false, 
+               hide: "puff",
+               show : "slide",
+               height: 200,
+               width: 150     
+            },{ position:{
+                  my: "center",
+                  at: "center"
+               }}).dialog("isOpen") == false) ? $("#dialog-register").dialog("open") : $("#dialog-register").dialog("close") ;
+       });
+       $("#dialog-register").dialog({autoOpen: false});
+    });
+    $(function(){
+       $("#login").click(function() {
+
+          ($("#dialog-login").dialog({
+               autoOpen: false, 
+               hide: "puff",
+               show : "slide",
+               height: 170,
+               width: 300     
+            },
+           {
+            position:{
+                  my: "right top",
+                  at: "right top"
+               }
+           }).dialog("isOpen") == false) ? $("#dialog-login").dialog("open") : $("#dialog-login").dialog("close") ;
+       });
+       $("#dialog-login").dialog({autoOpen: false});
+    });
+
+ </script>
+  <style type="text/css">
+  body {
+  background: #16a085;
+
+}
+.ui-widget-header,.ui-state-default, ui-button{
+            background:#b9cd6d;
+            border: 1px solid #b9cd6d;
+            color: #FFFFFF;
+            font-weight: bold;
+         }
+    .navbar{
+      margin-bottom: 1%;
+      border-radius: 0;
+      background-color: #5e4485;
+      color: fff;
+      padding: 1% 0;
+      font-size: 1.2em;
+      border: 0;
+      background: rgba(0,0,0,.1);
+    }
+    .dropdown-menu{
+      color: #fff;
+      background-color: #9485ac;
+    }
+    .navbar-brand{
+      float: left;
+      min-height: 75px;
+      padding: 0 15px 5px 10px;
+    }
+    .navbar-inverse .navbar-nav .active a,.navbar-inverse .navbar-nav .active a:focus,.navbar-inverse .navbar-nav .active a:hover {
+      color: #fff;
+      background-color: #5e4485;
+      border-radius: 2px;
+      background: rgba(0,0,0,.2);
+      
+    }
+    .navbar-inverse .navbar-nav li a:hover{
+      color: #d5d5d5;
+      background-color: #5e4485;
+      border-radius: 2px;
+      background: rgba(0,0,0,.5);
+      margin-left: 2px;
+
+    }
+    
+    .footer{
+          padding:20px;
+          margin-top:20px;
+          color:#ffffff;
+          background-color:#e8491d;
+          text-align: center;
+              }
+    #contact{
+      padding: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="particles">
+    <div id="intro">
+    <nav class="navbar navbar-inverse" role="navigation">
+     <div class="navbar-header">
+        <p><small>
+          <a class="navbar-brand" href="php/admin.php"><h3>Sergetechnologies<span> Home</span></h3></a>
+        </small></p>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" 
+           data-target="#example-navbar-collapse">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+        </button>
+       
+    </div>
+      <div class="collapse navbar-collapse" id="example-navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+           <li class="active"><a href="#myCarousel">Home</a></li>
+           <li><a href="#">About</a></li>
+           <li><a href="#">Services</a></li>
+           <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+  </nav>
+  <div >
+
+    <div >
+       <div>
+            <h1><small>Sergetechnologies Inc. </small> </h1>
+            
+              <button id="register" class="btn">Register</button>
+              <div id="dialog-register" title="Register Here">
+                Click on the Toggle button to open and cose this dialog box.
+             </div>
+             <button id="login" class="btn">Login</button>
+             <div id="dialog-login" title="Login Here">
+              <div class="container">
+                <div class="row">
+                  <label>Enter Username</label>
+                  <input type="text" placeholder="Enter Username">
+                  <label>Enter Password</label>
+                  <input type="password" placeholder="Enter Password">
+                  <input type="button" class="btn btn-default" value="Sign In">
+                </div>
+
+              </div>
+           </div>
+             <h6 style="color:red;">Create Account or Login</h6>
+        </div>
+          <div>
+               <p>We build Scalable Automated Systems,Softwares and Best AI Systems in Kenya</p>
+               <a href="#index.html" class="btn">Welcome</a>
+               <h2><br> <span>Put AI At The Heart Of Your Systems.</span></h2>
+          </div>
+      
+    </div>
+</div>
+</body>
+
+</html>
